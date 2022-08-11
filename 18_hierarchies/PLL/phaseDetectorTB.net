@@ -1,0 +1,54 @@
+* C:\Users\ruizc\Downloads\PLL\phaseDetectorTB.asc
+XX1 N003 CLKB DOWN 0 _UP VDD phasedetector
+V1 VDD 0 5
+V2 CLKB 0 PULSE(0 5 3u 1n 1n 10u 20u)
+V3 N002 0 PULSE(0 5 0 1n 1n 5u 10u)
+XX2 VDD N002 N001 N003 N001 0 VDD ffd
+
+* block symbol definitions
+.subckt phasedetector CLKA CLKB DOWN GND _UP VDD
+XX1 N001 CLKA VDD UP _UP GND VDD ffd
+XX2 N001 CLKB VDD DOWN NC_01 GND VDD ffd
+XX3 UP DOWN GND N001 VDD nand
+.ends phasedetector
+
+.subckt ffd _CLR CLK D Q _Q GND VDD
+M1 N001 PHI D VDD PFET l=600n w=6u
+M9 D _PHI N001 GND NFET l=600n w=3u
+M19 VDD _PHI PHI VDD PFET l=600n w=3u
+M20 PHI _PHI GND GND NFET l=600n w=1.5u
+M2 VDD N002 N003 VDD PFET l=600n w=6u
+M3 N003 _PHI N004 VDD PFET l=600n w=6u
+M4 N004 PHI N005 GND NFET l=600n w=3u
+M5 N005 N002 GND GND NFET l=600n w=3u
+M6 VDD N002 N006 VDD PFET l=600n w=6u
+M7 N006 _PHI N001 VDD PFET l=600n w=6u
+M8 N001 PHI N008 GND NFET l=600n w=3u
+M10 N008 N002 GND GND NFET l=600n w=3u
+M15 VDD _Q N007 VDD PFET l=600n w=6u
+M16 N007 PHI N004 VDD PFET l=600n w=6u
+M25 N004 _PHI N009 GND NFET l=600n w=3u
+M26 N009 _Q GND GND NFET l=600n w=3u
+M27 VDD _Q Q VDD PFET l=600n w=3u
+M28 Q _Q GND GND NFET l=600n w=1.5u
+XX1 _CLR N001 GND N002 VDD nand
+XX2 N004 _CLR GND _Q VDD nand
+M11 VDD CLK _PHI VDD PFET l=600n w=3u
+M12 _PHI CLK GND GND NFET l=600n w=1.5u
+.include "ami05.txt"
+.ends ffd
+
+.subckt nand A B GND OUT VDD
+M1 VDD B OUT VDD PFET l=600n w=3u
+M2 OUT B N001 GND NFET l=600n w=3u
+M3 N001 A GND GND NFET l=600n w=3u
+M4 VDD A OUT VDD PFET l=600n w=3u
+.include "ami05.txt"
+.ends nand
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\ruizc\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 100u
+.backanno
+.end

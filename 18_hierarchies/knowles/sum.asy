@@ -1,0 +1,22 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal 48 0 -80 -96
+ARC Normal -32 -94 -64 -30 -64 -62 -31 -62
+ARC Normal -64 -78 -32 -51 -64 -62 -32 -62
+ARC Normal -64 -80 -32 -53 -64 -64 -32 -64
+WINDOW 0 64 -3 Bottom 1
+PIN -64 -96 TOP 3
+PINATTR PinName P
+PINATTR SpiceOrder 1
+PIN -32 -96 TOP 3
+PINATTR PinName G
+PINATTR SpiceOrder 2
+PIN 48 -32 RIGHT 8
+PINATTR PinName GND
+PINATTR SpiceOrder 3
+PIN -48 0 BOTTOM 3
+PINATTR PinName S
+PINATTR SpiceOrder 4
+PIN 48 -64 RIGHT 8
+PINATTR PinName VDD
+PINATTR SpiceOrder 5

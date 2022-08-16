@@ -64,8 +64,26 @@
 > Diode bridge: diode, capacitor, resistor, sine voltage source
 
 ## 08 - Subcircuits
+
+- Importing subcircuits
+- MOSFET
+- Common source amplifier
+
+> Common source amplifier: NMOS, resistor, sine voltage source, DC voltage source
+
 ## 09 - DC sweep
+
+- One source DC sweep
+- Diode curve
+- Two source DC sweep
+- BJT characterization
+
+> Diode, NPN BJT, resistor
+
 ## 10 - AC analysis
+
+- 
+
 ## 11 - Modifying models
 ## 12 - Power
 ## 13 - Behavioral sources

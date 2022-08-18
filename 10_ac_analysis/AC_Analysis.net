@@ -1,0 +1,13 @@
+* C:\users\rigobertoruiz98\Documents\ltspice\10_ac_analysis\AC_Analysis.asc
+XU1 N003 Vo 5V -5V Vo TL082
+R1 N003 N001 15K
+R2 N001 N002 8.87K
+C1 N003 0 470p
+C2 Vo N001 0.001µ
+V1 N002 0 AC 1
+V2 5V 0 5
+V3 0 -5V 5
+.ac dec 10 10 1meg
+.include "TL082.301"
+.backanno
+.end

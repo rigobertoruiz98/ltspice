@@ -82,10 +82,27 @@
 
 ## 10 - AC analysis
 
-- 
+- AC analysis
+- Frequency response
+- Bode graphic
+
+> Active low-pass filter: Operational amplifier, resistor, capacitor, AC voltage source
 
 ## 11 - Modifying models
+
+- Modifying NPN transistor model
+- Modifying SPICE model
+- NPN BJT transistor model
+
+> DC bias for NPN transistor: NPN BJT, transistor, DC voltage source
+
 ## 12 - Power
+
+- Power measurement
+- Power in time domain
+
+> AC resistor circuit: Sine voltage source, resistor
+
 ## 13 - Behavioral sources
 ## 14 - Dependent sources
 ## 15 - Creating models

@@ -104,6 +104,9 @@
 > AC resistor circuit: Sine voltage source, resistor
 
 ## 13 - Behavioral sources
+
+- 
+
 ## 14 - Dependent sources
 ## 15 - Creating models
 ## 16 - Transfer function
